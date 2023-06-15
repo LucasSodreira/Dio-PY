@@ -8,7 +8,7 @@ function gerarMapaKarnaugh(tabela) {
       console.log("Número de variáveis inválido");
       return;
     }
-  
+
     // Criar o cabeçalho do Mapa de Karnaugh
     let mapaKarnaugh = "";
     for (let i = 0; i < numVariaveis; i++) {
@@ -52,6 +52,7 @@ function gerarMapaKarnaugh(tabela) {
   function obterExpressaoSimplificada(tabela, numVariaveis) {
     let mintermos = [];
   
+
     for (let i = 0; i < tabela.length; i++) {
       if (tabela[i][numVariaveis] === 1) {
         let binario = i.toString(2).padStart(numVariaveis, "0");
@@ -97,6 +98,7 @@ function gerarMapaKarnaugh(tabela) {
       return grupos;
     }
   
+
     function obterExpressaoGrupo(grupo) {
       let expressao = "";
   
@@ -113,6 +115,7 @@ function gerarMapaKarnaugh(tabela) {
           }
         }
   
+        
         if (valores.size > 1) {
           expressao += "(" + Array.from(valores).join("+") + ")";
         } else {
