@@ -1,0 +1,23 @@
+{% load static %}
+
+<header>
+    <a href="{% url 'index' %}"><img src="{% static 'assets/icons/logo.svg' %}" alt="logo"></a>
+    <form action="" class="searchBar">
+        <select name="categorias" id="buscaCategorias">
+            <option value="categorias">Categorias</option>
+            <option value="camisas">Camisas</option>
+            <option value="sandalias">Sandálias</option>
+            <option value="moleton">Moleton</option>
+            <option value="shorts">Shorts</option>
+            <option value="meias">Meias</option>
+            <option value="social">Social</option>
+        </select>
+        <input type="text" placeholder="Pesquise aqui...">
+        <button><img src="{% static 'assets/icons/search.svg' %}" alt="search" title="Pesquisar"></button>
+    </form>
+    <nav>
+        <ul>
+            <li><a href="{% url 'login' %}"><img src="{% static 'assets/icons/user.svg' %}" alt="perfil"></a></li>
+        </ul>
+    </nav>
+</header>

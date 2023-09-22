@@ -1,0 +1,41 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'assets/icons/logoIcon.svg' %}" type="image/x-icon">
+    <title>Fazer Login</title>
+</head>
+<body>
+    {% include 'templetor/header.html' %}
+
+    <main id="loginMain">
+        <section id="login">
+            <h1>Login</h1>
+            <br>
+            <form action="{% url 'index' %}">
+                <div class="formItem">
+                    <label for="">Email:</label>
+                    <input type="email" placeholder="Seu email...">
+                </div>
+                <div class="formItem">
+                    <label for="">Senha:</label>
+                    <input type="password" placeholder="Sua senha...">
+                </div>
+                <br>
+                <div id="formBtns">
+                    <a href="{% url 'index' %}"><button type="button"><img src="{% static 'assets/icons/backIcon.svg' %}" alt="back">  Voltar</button></a> 
+                    <button type="submit">Pronto</button>
+                </div>
+                <p>Ainda não é cadastrado? <a href="cadastro.html">Cadastre-se</a></p>
+            </form>
+        </section>
+    </main>
+    {% include 'templetor/footer.html' %}
+</body>
+</html>
